@@ -1,31 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Captcha Generator</title>
-    <!-- Font Awesome Icons -->
-    
-    <style src="style.css"></style>
-    
-       
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"</link>
-  </head>
-  <body>
-    <div class="container">
-      <div class="wrapper">
-        <canvas id="canvas" width="200" height="70"></canvas>
-        <button id="reload-button">
-          <i class="fa-solid fa-arrow-rotate-right"></i>
-        </button>
-      </div>
-      <input
-        type="text"
-        id="user-input"
-        placeholder="Enter the text in the image"
-      />
-      <button id="submit-button">Submit</button>
-    </div>
-    <!-- Script -->
-    <script src="script.js"></script>
-  </body>
+    <head>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body {
+                height: 100vh;
+                background-image: linear-gradient(to left, #0091ff, #db5e0a);
+            }
+            .container {
+                width: 32em;
+                background-color: #ffffff;
+                padding: 5em;
+                border-radius: 0.6em;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                box-shadow: 0 1em 2em rgba(0, 0, 0, 0.25);
+            }
+            .wrapper {
+                display: flex;
+                align-content: center;
+                justify-content: space-between;
+                margin: 1em 0;
+            }
+            canvas {
+                border: 1px solid #000000;
+                border-radius: 0.4em;
+            }
+            button#reload-button {
+                font-size: 26px;
+                width: 4.6em;
+                background-color: #4a6ee0;
+                border: none;
+                border-radius: 0.4em;
+                color: #ffffff;
+            }
+            input[type="text"] {
+                font-family: "Roboto Mono", monospace;
+                font-size: 1.05em;
+                width: 100%;
+                padding: 1em 0.7em;
+                border: 1px solid #000000;
+                border-radius: 0.4em;
+            }
+            button#submit-button {
+                width: 100%;
+                background-color: #4a6ee0;
+                color: #ffffff;
+                font-size: 1.5em;
+                border: none;
+                margin-top: 1em;
+                padding: 0.8em 0;
+                border-radius: 0.4em;
+                font-family: "Roboto Mono", monospace;
+            }
+        </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Captcha Generator</title>
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+        <!-- Stylesheet -->
+    </head>
+    <body>
+        <div class="container">
+            <div class="wrapper">
+                <canvas id="canvas" width="200" height="70"></canvas>
+                <button id="reload-button">
+                    <i class="fa-solid fa-arrow-rotate-right"></i>
+                </button>
+            </div>
+            <input type="text" id="user-input" placeholder="Enter the text in the image" />
+            <button id="submit-button">Submit</button>
+        </div>
+        <!-- Script -->
+        <script src="script.js"></script>
+    </body>
 </html>
