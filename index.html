@@ -1,0 +1,62 @@
+
+<style>
+    
+body {
+    background-image: linear-gradient(to left, #0091ff, #db5e0a);
+}
+    
+.container {
+  width: 402px;
+  height: 100px;
+  background-color: #ffffff;
+  padding: 5em;
+  border-radius: 0.6em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.25);
+}
+    
+.captchas-solved {
+    font-family: "Roboto Mono", monospace;
+    color: #db5e0a;
+    position: absolute;
+    top: 20px;
+}
+
+.solved-text {
+    font-family: "Roboto Mono", monospace;
+    position: absolute;
+    top: 40px;
+}
+
+.re-btn {
+  width: 100%;
+  background-color: #4a6ee0;
+  color: #ffffff;
+  font-size: 1.5em;
+  border: none;
+  margin-top: 1em;
+  padding: 0.8em 0;
+  border-radius: 0.4em;
+  font-family: "Roboto Mono", monospace;
+}
+
+    
+</style>
+
+<div class="container">
+    
+    <h3 class='captchas-solved'>1,000+</h3>
+    <h4 class='solved-text'>Captcha's Solved</h4>
+    
+    <form action='https://purecaptcha.github.io/solve' method='GET'>
+        
+        <br>
+        
+        <br>
+        <br>
+        
+        
+        <input class='re-btn' type='submit' value="Solve Captcha's">
